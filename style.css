@@ -1,0 +1,268 @@
+
+
+:root {
+
+  /* Theme 1 Backgrounds */
+  --theme-1-bg-main: hsl(222, 26%, 31%);
+  --theme-1-bg-keypad: hsl(223, 31%, 20%);
+  --theme-1-bg-screen: hsl(224, 36%, 15%);
+  /*theme 1 keys*/
+  --theme-1-key-bg-blue: hsl(225, 21%, 49%);
+  --theme-1-key-bg-blue-hover: hsl(225, 50%, 80%);
+  --theme-1-key-shadow-blue: hsl(224, 28%, 35%);
+  --theme-1-key-bg-toggle-red: hsl(6, 63%, 50%);
+  --theme-1-key-bg-toggle-red-hover: hsl(6, 63%, 60%);
+  --theme-1-key-shadow-red: hsl(6, 70%, 34%);
+  --theme-1-key-bg-orange: hsl(30, 25%, 89%);
+  --theme-1-key-bg-orange-hover: hsl(30, 45%, 99%);
+  --theme-1-key-shadow-orange: hsl(28, 16%, 65%);
+  /*theme 1 text*/
+  --theme-1-text-blue: hsl(221, 14%, 31%);
+  --theme-1-text-white: hsl(0, 0%, 100%);
+
+  /* Theme 2 Backgrounds */
+  --theme-2-bg-main: hsl(0, 0%, 90%);
+  --theme-2-bg-keypad: hsl(0, 5%, 81%);
+  --theme-2-bg-screen: hsl(0, 0%, 93%);
+  /*theme 2 keys*/
+  --theme-2-key-bg-cyan: hsl(185, 42%, 37%);
+  --theme-2-key-bg-cyan-hover: hsl(185, 42%, 47%);
+  --theme-2-key-shadow-cyan: hsl(185, 58%, 25%);
+  --theme-2-key-bg-toggle-orange: hsl(25, 98%, 40%);
+  --theme-2-key-bg-toggle-orange-hover: hsl(25, 98%, 50%);
+  --theme-2-key-shadow-orange-Dark: hsl(25, 99%, 27%);
+  --theme-2-key-bg-yellow: hsl(45, 7%, 89%);
+  --theme-2-key-bg-yellow-hover: hsl(45, 7%, 95%);
+  --theme-2-key-shadow-orange-grayish: hsl(35, 11%, 61%);
+  /*theme 2 text*/
+  --theme-2-text-yellow: hsl(60, 10%, 19%);
+  --theme-2-text-white: hsl(0, 0%, 100%);
+
+  /* Theme 3 Backgrounds */
+  --theme-3-bg-main: hsl(268, 75%, 9%);
+  --theme-3-bg-keypad-creen-toggle: hsl(268, 71%, 12%);
+  /*theme 3 keys*/
+  --theme-3-key-bg-violet-dark: hsl(281, 89%, 26%);
+  --theme-3-key-bg-violet-dark-hover: hsl(281, 89%, 40%);
+  --theme-3-key-shadow-magenta-Vivid: hsl(285, 91%, 52%);
+  --theme-3-key-bg-toggle-cyan: hsl(176, 100%, 44%);
+  --theme-3-key-bg-toggle-cyan-hover: hsl(176, 100%, 74%);
+  --theme-3-key-shadow-cyan: hsl(177, 92%, 70%);
+  --theme-3-key-bg-violet-very-dark: hsl(268, 47%, 21%);
+  --theme-3-key-bg-violet-very-dark-hover: hsl(268, 47%, 31%);
+  --theme-3-key-shadow-magenta-Dark: hsl(290, 70%, 36%);
+  /*theme 3 text*/
+  --theme-3-text-yellow: hsl(52, 100%, 62%);
+  --theme-3-text-blue: hsl(198, 20%, 13%);
+  --theme-3-text-white: hsl(0, 0%, 100%);
+
+  /*numbers*/
+  --numbers-fnt-sz: 32px;
+
+  /*font*/
+  --fnt-fml: 'League Spartan', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: var(--fnt-fml);
+  font-weight: 700;
+  min-height: 100vh;
+  background-color: var(--theme-1-bg-main);
+  display: flex;
+  justify-content: center;
+}
+
+.max-content {
+  margin-top: clamp(1rem,3vw,6rem);
+  max-width: 600px;
+  width: 100%;
+  align-self: flex-start;
+  padding: 2rem;
+}
+
+.flex-header {
+  display: flex;
+  color: var(--theme-1-text-white);
+  width: 100%;
+  justify-content: space-between;
+}
+.calc {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.theme-container {
+  display: flex;
+  gap: clamp(.5rem,6vw,1rem);
+}
+.theme {
+  text-transform: uppercase;
+  font-size: clamp(.6rem,3.5vw,.9rem);
+  letter-spacing: 1px;
+  align-self: flex-end;
+  margin-right: clamp(.5rem,3vw,1.5rem);
+  margin-bottom: .2rem;
+}
+.numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: .2rem;
+}
+.toggle-btn {
+  width: 5rem;
+  height: 1.5rem;
+  background-color: var(--theme-1-bg-keypad);
+  border-radius: 2rem;
+  display: flex;
+}
+.toggle-btn span {
+  display: block;
+  width: 20%;
+  aspect-ratio: 1/1;
+  background-color: var(--theme-1-key-bg-toggle-red);
+  align-self: center;
+  border-radius: 50%;
+  margin-left: .3rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.toggle-btn span:hover {
+  background-color: var(--theme-1-key-bg-toggle-red-hover);
+}
+
+.main-content {
+  width: 100%;
+  height: auto;
+  background-color: var(--theme-1-bg-screen);
+  margin-top: 2rem;
+  border-radius: .5rem;
+  padding: clamp(1rem,5vw,2rem);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.main-content-numbers {
+  font-size: clamp(2rem,20vw,4rem);
+  color: var(--theme-1-text-white);
+  align-self: flex-end;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  gap: clamp(.7rem,4vw,2rem);
+  padding: clamp(1rem,5vw,2rem);
+  margin-top: 1.5rem;
+  background-color: var(--theme-1-bg-keypad);
+  height: clamp(25rem,70vw,30rem);
+  border-radius: .5rem;
+}
+.grid-item {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--numbers-fnt-sz);
+  border-radius: .5rem;
+  cursor: pointer;
+  color: var(--theme-1-text-blue);
+  background-color: var(--theme-1-key-bg-orange);
+  box-shadow: 0px 4px 0px 0px var(--theme-1-key-shadow-orange);
+  transition: .3s;
+}
+.grid-item:hover {
+  background-color: var(--theme-1-key-bg-orange-hover);
+}
+.grid-item:nth-child(4) {
+  text-transform: uppercase;
+  background-color: var(--theme-1-key-bg-blue);
+  color: var(--theme-1-text-white);
+  transition: .3s;
+  box-shadow: 0px 4px 0px 0px var(--theme-1-key-shadow-blue);
+  font-size: clamp(1rem,5vw,1.6rem);
+  letter-spacing: 1px;
+}
+.grid-item:nth-child(4):hover {
+  background-color: var(--theme-1-key-bg-blue-hover);
+}
+.item-reset {
+  background-color: var(--theme-1-key-bg-blue);
+  color: var(--theme-1-text-white);
+  grid-column: -5 / -3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .3s;
+  box-shadow: 0px 4px 0px 0px var(--theme-1-key-shadow-blue);
+  font-size: clamp(1rem,5vw,1.8rem);
+}
+.item-reset:hover {
+  background-color: var(--theme-1-key-bg-blue-hover);
+}
+.item-equals {
+  color: var(--theme-1-text-white);
+  grid-column: -3 / -1;
+  background-color: var(--theme-1-key-bg-toggle-red);
+  transition: .3s;
+  box-shadow: 0px 4px 0px 0px var(--theme-1-key-shadow-red);
+}
+.item-equals:hover {
+  background-color: var(--theme-1-key-bg-toggle-red-hover);
+}
+
+
+@media only screen and (max-width: 375px) {
+  .max-content {
+    padding: 1rem;
+  }
+  .calc {
+    font-size: clamp(1.2rem,9vw,2rem);
+    margin-left: .5rem;
+  }
+  .theme-container {
+    gap: clamp(.5rem,3vw,.8rem);
+  }
+  .theme {
+    font-size: clamp(.5rem,3.5vw,.8rem);
+    margin-right: 0;
+    margin-bottom: .3rem;
+  }
+  .toggle-btn {
+    width: clamp(3rem,17vw,4rem);
+    height: clamp(1rem,7vw,1.5rem);
+  }
+  .numbers {
+    font-size: clamp(.7rem,4.3vw,1rem);
+  }
+  .main-content {
+    margin-top: clamp(1rem,9vw,2rem);
+    padding: clamp(.5rem,5vw,2rem)
+  }
+  .main-content-numbers {
+    font-size: clamp(1rem,15vw,4rem);
+  }
+  .grid {
+    gap: clamp(.3rem,4vw,2rem);
+    margin-top: clamp(.7rem,7vw,1.5rem);
+    height: clamp(14rem,99vw,25rem);
+  }
+  .grid-item {
+    font-size: clamp(1rem,9vw,2rem);
+  }
+  .item-reset {
+    font-size: clamp(.8rem,5vw,1.8rem);
+  }
+  .grid-item:nth-child(4) {
+    font-size: clamp(.5rem,5vw,1.6rem);
+  }
+}
